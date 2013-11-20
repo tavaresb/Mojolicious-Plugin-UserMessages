@@ -44,7 +44,7 @@ __DATA__
 <messages>
 % if ( user_messages->has_messages ) {
 %  for my $message ( user_messages->get ) {
-<message type='<%= $message->{'type'} %>'><%= $message->{'message'} %></message>
+<message type='<%= $message->type %>'><%= $message->message %></message>
 %  }
 % }
 </messages>

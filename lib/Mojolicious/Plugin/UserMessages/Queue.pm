@@ -3,6 +3,8 @@ package Mojolicious::Plugin::UserMessages::Queue;
 use Carp;
 use strict;
 
+use Mojolicious::Plugin::UserMessages::Message;
+
 our $AUTOLOAD;
 
 sub new {
@@ -72,7 +74,8 @@ sub get {
 
     for my $m ( @{ $c->session->{'__ui_message_queue'} } ) {
         if ( !$type || $type eq $m->type ) {
-            push @to_return, $m;
+            push @to_return,
+                 Mojolicious::Plugin::UserMessages::Message->new(%$m);
             next;
         }
         push @to_keep, $m;
