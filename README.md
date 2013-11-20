@@ -19,12 +19,12 @@ Mojolicious::Plugin::UserMessages - Mojolicious Plugin to manage user message(s)
     #  to the user
 
     %  for my $message ( user_messages->get ) {
-       <div><%= $message->{'type'} %> : <%= $message->{'message'} %></div>
+       <div><%= $message->type %> : <%= $message->message %></div>
     %  }
 
     # You can also get messages from a specific type
     %  for my $message ( user_messages->get_info ) {
-        <div>INFO : <%= $message->{'message'} %></div>
+        <div>INFO : <%= $message->message %></div>
     %  }
      
 
