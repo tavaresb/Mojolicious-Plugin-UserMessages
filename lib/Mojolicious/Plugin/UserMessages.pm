@@ -16,7 +16,7 @@ sub register {
 
 =head1 NAME
 
-Mojolicious::Plugin::UserMessages - Mojolicious Plugin to manage user message(s) qeue(s)
+Mojolicious::Plugin::UserMessages - Mojolicious Plugin to manage user message queue(s)
 
 =head1 SYNOPSIS
 
